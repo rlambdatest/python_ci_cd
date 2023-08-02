@@ -29,14 +29,9 @@ jobs:
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Download CSV file
-      run: |
-        mkdir -p Autoheal  # Create the directory if it doesn't exist
-        curl -sSL -H "Authorization: token ${{ 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}}" -o Autoheal/crediantial.csv "https://api.github.com/repos/${{ github.repository }}/contents/Autoheal/crediantial.csv"
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistic
     - name: Run Python Script
       run:
           Autoheal/crediantial.csv
-          python index.py
 
         
