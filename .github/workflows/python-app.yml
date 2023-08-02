@@ -31,6 +31,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistic
     - name: Run Python Script
       run:
-          python index.py "${{ github.workspace }}/Autoheal/crediantial.csv"
+          python index.py "${{ /home/runner/work/python_ci_cd/python_ci_cd }}/Autoheal/crediantial.csv"
 
         
