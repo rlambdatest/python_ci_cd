@@ -19,6 +19,9 @@ def run_automation_script(row):
     lt_options = {}
     lt_options["username"] = username
     lt_options["accessKey"] = access_key
+    lt_options["build"]="AutoHeal"
+    lt_options["autoHeal"]=True
+    lt_options["name"]= "testname"
     lt_options["project"] = "Parallel1"
     lt_options["selenium_version"] = "4.0.0"
     lt_options["w3c"] = True
